@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaan — Développeur web freelance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Kaan</div>
+      <button id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#apropos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Développeur web freelance</p>
+      <h1>Je crée des sites vitrines sur mesure pour votre activité.</h1>
+      <p class="hero-subtitle">HTML, CSS, JavaScript — des sites rapides, propres et pensés pour convertir vos visiteurs en clients.</p>
+      <a href="#projets" class="btn-primary">Voir mes projets</a>
+    </div>
+  </header>
+
+  <section id="apropos" class="reveal">
+    <span class="eyebrow">Qui je suis</span>
+    <h2>Développeur web en formation, déjà sur le terrain</h2>
+    <p class="texte-centre">Je suis actuellement en train de me former au développement web, avec pour objectif d'accompagner des artisans, indépendants et petites entreprises qui n'ont pas encore de site ou souhaitent le moderniser. Chaque projet est codé sur mesure, sans template générique, pour un rendu unique et adapté à votre activité.</p>
+  </section>
+
+  <section id="projets" class="reveal alt-bg">
+    <span class="eyebrow">Ce que j'ai réalisé</span>
+    <h2>Mes projets</h2>
+    <div class="projets-grille">
+      <div class="projet-carte">
+        <div class="projet-image" style="background-image: url('https://images.unsplash.com/photo-1517705008128-361805f42e86?w=600')"></div>
+        <div class="projet-contenu">
+          <h3>Menuiserie Dupont</h3>
+          <p>Site vitrine pour un artisan menuisier : présentation des services, galerie de réalisations, témoignages clients et formulaire de contact.</p>
+          <a href="https://eachenilco-ship-it.github.io/menuiserie-dupont/" target="_blank" class="lien-projet">Voir le site en ligne →</a>
+        </div>
+      </div>
+      <div class="projet-carte">
+        <div class="projet-image" style="background-image: url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600')"></div>
+        <div class="projet-contenu">
+          <h3>Ker'Equine</h3>
+          <p>Site vitrine pour une massothérapeute animalière : présentation des prestations, galerie, avis clients et prise de contact.</p>
+          <a href="https://eachenilco-ship-it.github.io/kerequine/" target="_blank" class="lien-projet">Voir le site en ligne →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <span class="eyebrow">Un projet en tête ?</span>
+    <h2>Contactez-moi</h2>
+    <form id="formulaire-contact">
+      <input type="text" id="nom" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Décrivez votre projet" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+      <p id="confirmation"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>Kaan — Développeur web freelance</p>
+    <p class="footer-sub">&copy; 2026 — Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
