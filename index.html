@@ -3,77 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaan — Développeur web freelance</title>
+  <meta name="description" content="Kaan crée des sites vitrines modernes et sur mesure pour les artisans, indépendants et petites entreprises.">
+  <meta name="theme-color" content="#111216">
+  <title>Kaan — Sites web qui donnent envie de vous contacter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="hero">
-    <nav class="navbar">
-      <div class="logo">Kaan</div>
-      <button id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <header class="hero" id="accueil">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
+        <span class="brand-mark"><img src="panther-logo.png" alt="" aria-hidden="true"></span>
+        <span>Kaan<span class="brand-dot">.</span></span>
+      </a>
+      <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">☰</button>
       <div class="nav-links" id="nav-links">
         <a href="#apropos">À propos</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
+        <a href="#projets">Réalisations</a>
+        <a href="#methode">Méthode</a>
+        <a href="#contact" class="nav-cta">Parler de mon projet</a>
       </div>
     </nav>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">Développeur web freelance</p>
-      <h1>Je crée des sites vitrines sur mesure pour votre activité.</h1>
-      <p class="hero-subtitle">HTML, CSS, JavaScript — des sites rapides, propres et pensés pour convertir vos visiteurs en clients.</p>
-      <a href="#projets" class="btn-primary">Voir mes projets</a>
+      <div class="hero-copy reveal visible">
+        <p class="hero-eyebrow">Sites web sur mesure · Bretagne & à distance</p>
+        <h1>Un site qui donne envie de <em>vous choisir.</em></h1>
+        <p class="hero-subtitle">J’aide les artisans, indépendants et petites entreprises à présenter leur savoir-faire et à recevoir plus de demandes grâce à un site clair, rapide et pensé pour leurs clients.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Parler de mon projet <span>↗</span></a>
+          <a href="#projets" class="btn-ghost">Voir les réalisations <span>↓</span></a>
+        </div>
+        <div class="hero-proof"><span class="proof-dot"></span> Réponse personnalisée · Projet sur mesure</div>
+      </div>
+      <div class="hero-visual reveal visible" aria-hidden="true">
+        <div class="visual-orbit"></div>
+        <div class="visual-glow"></div>
+        <img src="panther-logo.png" alt="" class="panther-hero">
+        <div class="visual-caption"><span>01</span><strong>Créer. Captiver.<br>Convertir.</strong></div>
+      </div>
     </div>
+    <div class="hero-scroll" aria-hidden="true"><span></span> Découvrir</div>
   </header>
 
-  <section id="apropos" class="reveal">
-    <span class="eyebrow">Qui je suis</span>
-    <h2>Développeur web en formation, déjà sur le terrain</h2>
-    <p class="texte-centre">Je suis actuellement en train de me former au développement web, avec pour objectif d'accompagner des artisans, indépendants et petites entreprises qui n'ont pas encore de site ou souhaitent le moderniser. Chaque projet est codé sur mesure, sans template générique, pour un rendu unique et adapté à votre activité.</p>
-  </section>
-
-  <section id="projets" class="reveal alt-bg">
-    <span class="eyebrow">Ce que j'ai réalisé</span>
-    <h2>Mes projets</h2>
-    <div class="projets-grille">
-      <div class="projet-carte">
-        <div class="projet-image" style="background-image: url('https://images.unsplash.com/photo-1517705008128-361805f42e86?w=600')"></div>
-        <div class="projet-contenu">
-          <h3>Menuiserie Dupont</h3>
-          <p>Site vitrine pour un artisan menuisier : présentation des services, galerie de réalisations, témoignages clients et formulaire de contact.</p>
-          <a href="https://eachenilco-ship-it.github.io/menuiserie-dupont/" target="_blank" class="lien-projet">Voir le site en ligne →</a>
-        </div>
+  <main>
+    <section id="apropos" class="intro reveal">
+      <div class="section-heading">
+        <span class="eyebrow">Pour votre activité</span>
+        <h2>Votre savoir-faire mérite une présence à sa hauteur.</h2>
       </div>
-      <div class="projet-carte">
-        <div class="projet-image" style="background-image: url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600')"></div>
-        <div class="projet-contenu">
-          <h3>Ker'Equine</h3>
-          <p>Site vitrine pour une massothérapeute animalière : présentation des prestations, galerie, avis clients et prise de contact.</p>
-          <a href="https://eachenilco-ship-it.github.io/kerequine/" target="_blank" class="lien-projet">Voir le site en ligne →</a>
-        </div>
+      <div class="intro-grid">
+        <p class="intro-lead">Un bon site ne se contente pas d’être joli. Il explique votre valeur, rassure vos futurs clients et les guide vers la bonne action.</p>
+        <div class="intro-text"><p>Je conçois des sites vitrines personnalisés pour les professionnels qui veulent être mieux compris et plus facilement contactés. Pas de modèle générique : chaque page est pensée autour de votre activité, de vos clients et de vos objectifs.</p><a href="#contact" class="text-link">Construisons votre présence en ligne <span>→</span></a></div>
       </div>
-    </div>
-  </section>
+      <div class="benefits-grid">
+        <article class="benefit-card"><span class="benefit-number">01</span><h3>Clair</h3><p>Une structure simple pour que vos visiteurs comprennent vite votre offre.</p></article>
+        <article class="benefit-card"><span class="benefit-number">02</span><h3>Crédible</h3><p>Un univers cohérent qui met en valeur votre expertise et vos réalisations.</p></article>
+        <article class="benefit-card"><span class="benefit-number">03</span><h3>Efficace</h3><p>Des appels à l’action visibles pour transformer l’intérêt en demande.</p></article>
+      </div>
+    </section>
 
-  <section id="contact" class="reveal">
-    <span class="eyebrow">Un projet en tête ?</span>
-    <h2>Contactez-moi</h2>
-    <form id="formulaire-contact">
-      <input type="text" id="nom" placeholder="Votre nom" required>
-      <input type="email" id="email" placeholder="Votre email" required>
-      <textarea id="message" placeholder="Décrivez votre projet" rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
-      <p id="confirmation"></p>
-    </form>
-  </section>
+    <section id="projets" class="projects-section reveal">
+      <div class="section-heading section-heading-light"><span class="eyebrow">Sélection de projets</span><h2>Des expériences pensées<br><em>pour chaque métier.</em></h2><p>Deux exemples de sites conçus pour présenter une activité avec justesse et donner envie de passer à l’action.</p></div>
+      <div class="projets-grille">
+        <article class="projet-carte">
+          <a href="https://eachenilco-ship-it.github.io/menuiserie-dupont/" target="_blank" rel="noopener noreferrer" class="projet-image projet-image-menuiserie" aria-label="Découvrir le site Menuiserie Dupont"></a>
+          <div class="projet-contenu"><div class="project-meta"><span>Artisanat</span><span>Site vitrine</span></div><h3>Menuiserie Dupont</h3><p>Un site chaleureux pour rendre visible un savoir-faire artisanal, présenter les services et faciliter les demandes de devis.</p><a href="https://eachenilco-ship-it.github.io/menuiserie-dupont/" target="_blank" rel="noopener noreferrer" class="lien-projet">Voir l’étude en ligne <span>↗</span></a></div>
+        </article>
+        <article class="projet-carte">
+          <a href="https://eachenilco-ship-it.github.io/kerequine/" target="_blank" rel="noopener noreferrer" class="projet-image projet-image-kerequine" aria-label="Découvrir le site Ker'Equine"></a>
+          <div class="projet-contenu"><div class="project-meta"><span>Bien-être animal</span><span>Prise de rendez-vous</span></div><h3>Ker'Equine</h3><p>Une identité douce et professionnelle pour présenter les prestations, les avis clients et encourager la prise de contact.</p><a href="https://eachenilco-ship-it.github.io/kerequine/" target="_blank" rel="noopener noreferrer" class="lien-projet">Voir l’étude en ligne <span>↗</span></a></div>
+        </article>
+      </div>
+    </section>
 
-  <footer>
-    <p>Kaan — Développeur web freelance</p>
-    <p class="footer-sub">&copy; 2026 — Tous droits réservés</p>
-  </footer>
+    <section id="methode" class="method-section reveal">
+      <div class="section-heading"><span class="eyebrow">Un projet simple, étape par étape</span><h2>De l’idée à la mise en ligne.</h2></div>
+      <div class="method-grid"><div class="method-step"><span>01</span><h3>On échange</h3><p>Votre activité, vos clients et ce que vous voulez obtenir.</p></div><div class="method-step"><span>02</span><h3>On structure</h3><p>Une proposition claire pour organiser le contenu et le parcours.</p></div><div class="method-step"><span>03</span><h3>Je construis</h3><p>Un site responsive, rapide et adapté à votre image.</p></div><div class="method-step"><span>04</span><h3>On lance</h3><p>Derniers ajustements, mise en ligne et conseils pour la suite.</p></div></div>
+    </section>
+
+    <section id="contact" class="contact-section reveal">
+      <div class="contact-intro"><span class="eyebrow">Parlons de votre activité</span><h2>Prêt à donner une vraie place à votre projet&nbsp;?</h2><p>Décrivez-moi votre besoin. Je vous répondrai avec une première proposition claire et adaptée.</p><div class="contact-note"><span class="note-icon">✦</span><span>Pas besoin de tout savoir avant de commencer.</span></div></div>
+      <form id="formulaire-contact" class="contact-form">
+        <label for="nom">Votre nom</label><input type="text" id="nom" name="nom" placeholder="Ex. Marie Dupont" required>
+        <label for="email">Votre email</label><input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+        <label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Parlez-moi de votre activité et de votre besoin..." rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Envoyer ma demande <span>↗</span></button><p id="confirmation" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#accueil"><span class="brand-mark"><img src="panther-logo.png" alt="" aria-hidden="true"></span><span>Kaan<span class="brand-dot">.</span></span></a><p>Sites web sur mesure pour les projets qui ont quelque chose à dire.</p><div class="footer-bottom"><span>© 2026 Kaan</span><a href="#contact">Parler de mon projet ↗</a></div></footer>
 
   <script src="script.js"></script>
 </body>
