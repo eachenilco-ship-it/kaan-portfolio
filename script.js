@@ -23,10 +23,28 @@ if (bouton && menu) {
 const formulaire = document.getElementById('formulaire-contact');
 const confirmation = document.getElementById('confirmation');
 if (formulaire && confirmation) {
-  formulaire.addEventListener('submit', function (event) {
+  formulaire.addEventListener('submit', async function (event) {
     event.preventDefault();
-    confirmation.textContent = 'Merci ! Votre demande a bien été prise en compte. Je vous réponds rapidement.';
-    formulaire.reset();
+    const boutonEnvoi = formulaire.querySelector('button[type="submit"]');
+    const texteBouton = boutonEnvoi.innerHTML;
+    boutonEnvoi.disabled = true;
+    boutonEnvoi.innerHTML = 'Envoi en cours…';
+    confirmation.textContent = '';
+    try {
+      const reponse = await fetch(formulaire.action, {
+        method: formulaire.method,
+        body: new FormData(formulaire),
+        headers: { Accept: 'application/json' }
+      });
+      if (!reponse.ok) throw new Error('Formspree request failed');
+      confirmation.textContent = 'Merci ! Votre demande a bien été envoyée. Riyugi vous répondra rapidement.';
+      formulaire.reset();
+    } catch (erreur) {
+      confirmation.textContent = 'L’envoi n’a pas abouti. Vous pouvez écrire directement à eachenilco@gmail.com.';
+    } finally {
+      boutonEnvoi.disabled = false;
+      boutonEnvoi.innerHTML = texteBouton;
+    }
   });
 }
 
