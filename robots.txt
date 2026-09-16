@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://eachenilco-ship-it.github.io/kaan-portfolio/sitemap.xml
