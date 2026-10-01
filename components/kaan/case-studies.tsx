@@ -27,18 +27,6 @@ const CASES: CaseStudy[] = [
     beforeSrc: '/images/dupont-before.png',
     afterSrc: '/images/dupont-after.png',
   },
-  {
-    tags: ['Bien-être animal', 'Prise de rendez-vous'],
-    name: "Ker'Equine",
-    problem:
-      "Une offre sensible et spécialisée qui avait besoin de rassurer avant d'inviter à prendre rendez-vous.",
-    did: 'Une identité douce, des prestations lisibles et un parcours centré sur la confiance.',
-    result:
-      'Donner envie de faire le premier pas grâce à une expérience plus claire et humaine.',
-    url: 'ker-equine.fr',
-    beforeSrc: '/images/kerequine-before.png',
-    afterSrc: '/images/kerequine-after.png',
-  },
 ]
 
 function DetailRow({ label, children }: { label: string; children: React.ReactNode }) {
@@ -55,21 +43,21 @@ export function CaseStudies() {
     <section id="etudes-de-cas" className="relative bg-ink text-white">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
         <SectionLabel
-          label="Études de cas · Projets de démonstration"
+          label="Études de cas · Projet de démonstration"
           index="02 / 05"
         />
         <div className="mt-8 max-w-2xl">
           <Reveal>
             <h2 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-              Deux métiers.{' '}
+              Un exemple.{' '}
               <span className="text-gold">
-                Deux façons de créer la confiance.
+                Ce que je peux faire pour vous.
               </span>
             </h2>
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-5 text-base leading-relaxed text-sand">
-              Ces projets sont fictifs et servent à montrer concrètement comment
+              Ce projet est fictif et sert à montrer concrètement comment
               Kaan Studio aborde un problème de visibilité, de compréhension et de
               prise de contact.
             </p>
@@ -115,7 +103,7 @@ export function CaseStudies() {
                     href="#contact"
                     className="mt-7 inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-gold/50 hover:text-gold"
                   >
-                    Ouvrir la démo
+                    Je veux la même chose pour mon activité
                     <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
                   </a>
                 </div>
